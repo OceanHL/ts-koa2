@@ -1,0 +1,38 @@
+{
+    "name": "koa2_server",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "nodemon bin/www.ts",
+        "dev": "cross-env NODE_ENV=development ./node_modules/.bin/nodemon bin/www.ts",
+        "prd": "cross-env NODE_ENV=production tsc && yarn copy-static && pm2 start dist/bin/www.js",
+        "copy-static": "ts-node copyStatic.ts"
+    },
+    "dependencies": {
+        "@types/debug": "^4.1.7",
+        "@types/koa": "^2.13.4",
+        "@types/koa-bodyparser": "^4.3.3",
+        "@types/koa-json": "^2.0.20",
+        "@types/koa-logger": "^3.1.2",
+        "@types/koa-router": "^7.4.4",
+        "@types/node": "^16.11.6",
+        "@types/shelljs": "^0.8.9",
+        "cross-env": "^7.0.3",
+        "debug": "^4.1.1",
+        "koa": "^2.7.0",
+        "koa-bodyparser": "^4.2.1",
+        "koa-convert": "^1.2.0",
+        "koa-json": "^2.0.2",
+        "koa-logger": "^3.2.0",
+        "koa-onerror": "^4.1.0",
+        "koa-router": "^7.4.0",
+        "koa-static": "^5.0.0",
+        "koa-views": "^6.2.0",
+        "pug": "^2.0.3",
+        "shelljs": "^0.8.4",
+        "typescript": "^4.4.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.14"
+    }
+}
